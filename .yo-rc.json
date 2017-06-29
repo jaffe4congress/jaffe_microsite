@@ -1,0 +1,9 @@
+{
+  "generator-angm": {
+    "appName": "jaffe-microsite",
+    "angularCookies": true,
+    "angularAnimate": true,
+    "angularSanitize": true,
+    "angularMaterial": true
+  }
+}
