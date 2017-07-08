@@ -220,4 +220,15 @@ angular.module('jaffe-microsite').run(['$templateCache', function($templateCache
     "        </md-list>\n"
   );
 
+
+  $templateCache.put('app/modules/profiles/profiles.html',
+    "<div class=\"md-padding\" flex layout-sm=\"column\">\n" +
+    "    <md-card>\n" +
+    "        <md-card-content>\n" +
+    "            <h2 class=\"md-title\">Content from: profiles page</h2>\n" +
+    "        </md-card-content>\n" +
+    "    </md-card>\n" +
+    "</div>\n"
+  );
+
 }]);

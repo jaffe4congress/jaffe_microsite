@@ -6,25 +6,25 @@
 	'use strict';
 
 	/**
-	* @ngdoc index
-	* @name app
-	* @description
-	* # app
-	*
-	* Main module of the application.
-	*/
+	 * @ngdoc index
+	 * @name app
+	 * @description
+	 * # app
+	 *
+	 * Main modules of the application.
+	 */
 
 	angular.module('jaffe-microsite', [
 		'ngResource',
 		'ngAria',
 		 'ngMaterial',
 		'ngMdIcons',
-		'ngMessages',
 		'ngCookies',
 		'ngAnimate',
 		'ngSanitize',
 		'ui.router',
 		'home',
+		'profiles',
 	]);
 
 })();
@@ -86,6 +86,21 @@
 	angular.module('home', []);
 })();
 
+(function () {
+	'use strict';
+
+	/**
+	 * @ngdoc function
+	 * @name app.module:profilesModule
+	 * @description
+	 * # profilesModule
+	 * Module of the app
+	 */
+
+  	angular.module('profiles', []);
+
+})();
+
 'use strict';
 
 	/**
@@ -112,6 +127,30 @@ angular.module('jaffe-microsite')
 				templateUrl: 'app/modules/home/dashboard.html'
 			});
 			
+	}]);
+
+'use strict';
+
+/**
+ * @ngdoc function
+ * @name app.route:profilesRoute
+ * @description
+ * # profilesRoute
+ * Route of the app
+ */
+
+angular.module('profiles')
+	.config(['$stateProvider', function ($stateProvider) {
+		
+		$stateProvider
+			.state('home.profiles', {
+				url:'/profiles',
+				templateUrl: 'app/modules/profiles/profiles.html',
+				controller: 'ProfilesCtrl',
+				controllerAs: 'vm'
+			});
+
+		
 	}]);
 
 (function () {
@@ -345,6 +384,37 @@ angular.module('jaffe-microsite')
 
 })();
 
+(function() {
+	'use strict';
+
+	/**
+	* @ngdoc function
+	* @name app.controller:profilesCtrl
+	* @description
+	* # profilesCtrl
+	* Controller of the app
+	*/
+
+  	angular
+		.module('profiles')
+		.controller('ProfilesCtrl', Profiles);
+
+		Profiles.$inject = [];
+
+		/*
+		* recommend
+		* Using function declarations
+		* and bindable members up top.
+		*/
+
+		function Profiles() {
+			/*jshint validthis: true */
+			var vm = this;
+
+		}
+
+})();
+
 (function () {
 	'use strict';
 
@@ -388,40 +458,107 @@ angular.module('jaffe-microsite')
 
 })();
 
-(function () {
+(function() {
 	'use strict';
 
 	/**
-	* @ngdoc function
-	* @name app.service:menuService
-	* @description
-	* # menuService
-	* Service of the app
-	*/
+	 * @ngdoc function
+	 * @name app.service:menuService
+	 * @description
+	 * # menuService
+	 * Service of the app
+	 */
 
-	angular
+  	angular
 		.module('jaffe-microsite')
 		.factory('MenuService', Menu);
+		// Inject your dependencies as .$inject = ['$http', 'someSevide'];
+		// function Name ($http, someSevide) {...}
 
-	// Inject your dependencies as .$inject = ['$http', '$otherDependency'];
-	// function Name ($http, $otherDependency) {...}
+		Menu.$inject = ['$http'];
 
-	Menu.$inject = ['$http'];
+		function Menu ($http) {
 
-	function Menu($http) {
-		// Sample code.
+			var menu = [
+				
+					{
+						link: 'profiles',
+							name: 'Profiles'
+					},
+			    
+		  	];
 
-		var menu = [{
-			link: '.',
-			name: 'This is a Placeholder menu. It disappears when the first module has been created.'
-		}];
+			return {
+				listMenu: function () {
+					return menu;
+				}
+		  	}
 
-		return {
-			listMenu: function () {
-				return menu;
-			}
-		};
+		}
 
-	}
+})();
+
+(function() {
+	'use strict';
+
+	/**
+	 * @ngdoc function
+	 * @name app.service:menuService
+	 * @description
+	 * # menuService
+	 * Service of the app
+	 */
+
+  	angular
+		.module('jaffe-microsite')
+		.factory('MenuService', Menu);
+		// Inject your dependencies as .$inject = ['$http', 'someSevide'];
+		// function Name ($http, someSevide) {...}
+
+		Menu.$inject = ['$http'];
+
+		function Menu ($http) {
+
+			var menu = [
+				
+					{
+						link: 'profiles',
+							name: 'Profiles'
+					},
+			    
+		  	];
+
+			return {
+				listMenu: function () {
+					return menu;
+				}
+		  	}
+
+		}
+
+})();
+
+(function() {
+	'use strict';
+
+	/**
+	 * @ngdoc function
+	 * @name app.service:profilesService
+	 * @description
+	 * # profilesService
+	 * Service of the app
+	 */
+
+  	angular
+		.module('profiles')
+		.factory('ProfilesService', Profiles);
+		// Inject your dependencies as .$inject = ['$http', 'someSevide'];
+		// function Name ($http, someSevide) {...}
+
+		Profiles.$inject = ['$http'];
+
+		function Profiles ($http) {
+
+		}
 
 })();

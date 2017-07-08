@@ -58,6 +58,12 @@ module.exports = function (grunt) {
 
 				],
 				dest: 'app/assets/js/<%= pkg.name %>-angularbundle.js'
+			},
+			css:{
+				src:[
+					'app/modules/**/*css'
+				],
+				dest:'app/assets/css/<%= pkg.name %>-appbundle.css'
 			}
 		},
 
@@ -165,7 +171,6 @@ module.exports = function (grunt) {
 		"concat",
 		"ngtemplates",
 		"injector:production",
-		"concurrent",
 		"clean"
 	]);
 
