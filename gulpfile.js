@@ -23,8 +23,8 @@ gulp.task('wiredep', function() {
 	return gulp
 		.src(config.index)
 		.pipe(wiredep(options))
-		.pipe($.inject(gulp.src(config.js),{ignorePath: 'src/app'}))
-		.pipe($.inject(gulp.src(config.css),{ignorePath: 'src/app'}))
+		.pipe($.inject(gulp.src(config.js),{ignorePath: 'app'}))
+		.pipe($.inject(gulp.src(config.css),{ignorePath: 'app'}))
 		.pipe(gulp.dest(config.client));
 });
 

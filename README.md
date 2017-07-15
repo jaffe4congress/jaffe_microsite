@@ -12,9 +12,17 @@ Global dependencies:
 4. npm install -g generator-angm
 5. npm install -g bower-installer
  
+
+After dependencies are installed run:
+
+ ```bash
+ npm install 
+ bower install
+ ```
+ 
  
  ## Running project on development
- Open your Terminal/Shell and type:
+ In root of directory folder run:
  
  ```bash
  gulp serve-dev
@@ -51,8 +59,6 @@ The subgenerator will produce the following directory structure:
 		moduleName-test.js
 ```
 
-**Note: Subgenerators are to be run from the root directory of your application.**
-
 ## Directives
 To create a directive just type on your terminal window:
 
@@ -74,3 +80,9 @@ shared/
 				directiveName-test.js
 ```
 
+**Note: Subgenerators are to be run from the root directory of your application.**
+
+**After running subgenerator run the following gulp task to port file references to index.html**
+```
+gulp wiredep
+```

@@ -8,19 +8,12 @@
     "modules": [
       {
         "name": "profiles"
-      },
-      {
-        "name": "login"
       }
     ],
     "menu": [
       {
         "link": "profiles",
         "title": "Profiles"
-      },
-      {
-        "link": "login",
-        "title": "Login"
       }
     ]
   }
