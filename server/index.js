@@ -11,7 +11,7 @@ server.connection({ port: port });
 
 server.register(require('inert'));
 
-var staticAssetPath = (environment === 'dev') ? 'src/app':'./../src/app';
+var staticAssetPath = (environment === 'dev') ? 'app':'./../app';
 
 //server.route({
 //	path : '/',
