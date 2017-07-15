@@ -35,6 +35,11 @@ module.exports = function (config) {
 			'app/modules/profiles/profilesRoute.js',
 			'app/modules/profiles/profilesService.js',
 			'app/modules/profiles/profiles-test.js',
+			'app/modules/login/loginModule.js',
+			'app/modules/login/loginCtrl.js',
+			'app/modules/login/loginRoute.js',
+			'app/modules/login/loginService.js',
+			'app/modules/login/login-test.js',
 		],
 
 		// Test results reporter to use

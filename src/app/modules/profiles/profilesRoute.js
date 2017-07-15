@@ -10,14 +10,14 @@
 
 angular.module('profiles')
 	.config(['$stateProvider', function ($stateProvider) {
-		
+
 		$stateProvider
 			.state('home.profiles', {
 				url:'/profiles',
-				templateUrl: 'app/modules/profiles/profiles.html',
+				templateUrl: 'modules/profiles/profiles.html',
 				controller: 'ProfilesCtrl',
 				controllerAs: 'vm'
 			});
 
-		
+
 	}]);

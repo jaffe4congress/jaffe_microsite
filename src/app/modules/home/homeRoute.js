@@ -11,17 +11,17 @@
 angular.module('jaffe-microsite')
 	.config(['$stateProvider', function ($stateProvider) {
 		$stateProvider
-			
+
 			.state('home', {
 				url: '',
 				abstract: true,
-				templateUrl: 'app/modules/home/home.html',
+				templateUrl: 'modules/home/home.html',
 				controller: 'HomeCtrl',
 				controllerAs: 'vm'
 			})
 			.state('home.dashboard', {
 				url:'/dashboard',
-				templateUrl: 'app/modules/home/dashboard.html'
+				templateUrl: 'modules/home/dashboard.html'
 			});
-			
+
 	}]);
