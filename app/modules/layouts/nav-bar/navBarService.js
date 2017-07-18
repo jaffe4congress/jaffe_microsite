@@ -26,6 +26,11 @@
 							name: 'Profiles'
 					},
 			    
+					{
+						link: 'login',
+							name: 'Login'
+					},
+			    
 		  	];
 
 			return {

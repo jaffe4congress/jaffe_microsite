@@ -14,7 +14,7 @@ angular.module('profiles')
 		$stateProvider
 			.state('home.profiles', {
 				url:'/profiles',
-				templateUrl: 'modules/profiles/profiles.html',
+				templateUrl: 'app/modules/profiles/profiles.html',
 				controller: 'ProfilesCtrl',
 				controllerAs: 'vm'
 			});

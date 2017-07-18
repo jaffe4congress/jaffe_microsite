@@ -15,13 +15,13 @@ angular.module('jaffe-microsite')
 			.state('home', {
 				url: '',
 				abstract: true,
-				templateUrl: 'modules/home/home.html',
+				templateUrl: 'app/modules/home/home.html',
 				controller: 'HomeCtrl',
 				controllerAs: 'vm'
 			})
 			.state('home.dashboard', {
 				url:'/dashboard',
-				templateUrl: 'modules/home/dashboard.html'
+				templateUrl: 'app/modules/home/dashboard.html'
 			});
 
 	}]);

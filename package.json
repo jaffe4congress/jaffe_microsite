@@ -21,12 +21,16 @@
     "inert": "^4.2.0"
   },
   "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "del": "^1.1.1",
     "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.0.0",
     "gulp-if": "^2.0.2",
     "gulp-inject": "^4.2.0",
     "gulp-jscs": "^4.0.0",
     "gulp-jshint": "^2.0.4",
     "gulp-load-plugins": "^1.5.0",
+    "gulp-minify-html": "^1.0.6",
     "gulp-nodemon": "^2.2.1",
     "gulp-print": "^2.0.1",
     "gulp-util": "^3.0.8",

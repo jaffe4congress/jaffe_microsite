@@ -2,6 +2,7 @@ module.exports = function() {
 	var client = './app/';
 	var server = './server/';
 	var clientApp = client + 'modules/';
+	var temp = clientApp + 'templatecache/';
 	var config = {
 
 		// all js to vet
@@ -9,8 +10,11 @@ module.exports = function() {
 			'./app/modules/**/*.js'
 		],
 		client:client,
+		build:"./build/",
 		server:server,
+		temp: temp,
 		index: client + 'index.html',
+		htmltemplates: clientApp + '**/*.html',
 		css: clientApp + '**/*.css',
 		js: [
 			client + 'app.js',
@@ -18,7 +22,8 @@ module.exports = function() {
 			client + 'app.config.js',
 			clientApp + '**/*Module.js',
 			clientApp + '**/*.js',
-			'!' + clientApp + '**/*-test.js'
+			'!' + clientApp + '**/*-test.js',
+			'!' + temp + '**/*.js'
 		],
 
 		/**
@@ -28,6 +33,18 @@ module.exports = function() {
 			json: require('./bower.json'),
 			directory: './app/bower_components/',
 			ignorePath: '../'
+		},
+
+		/**
+		 * template cache
+		 */
+		templateCache: {
+			filename: 'temp.js',
+			options: {
+				module: 'home',
+				standAlone: false,
+				root: 'app/modules/'
+			}
 		},
 
 		/**
